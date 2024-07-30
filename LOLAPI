@@ -73,60 +73,25 @@
           }
         }
       }
-    },
-    "/user/{userId}" : {
-      "get" : {
-        "summary" : "Returns a user by ID.",
-        "parameters" : [ {
-          "name" : "userId",
-          "in" : "path",
-          "description" : "The ID of the user to return.",
-          "required" : true,
-          "style" : "simple",
-          "explode" : false,
-          "schema" : {
-            "minimum" : 1,
-            "type" : "integer",
-            "format" : "int64"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "A user object.",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/inline_response_200"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "The specified user ID is invalid (not a number)."
-          },
-          "404" : {
-            "description" : "A user with the specified ID was not found."
-          },
-          "default" : {
-            "description" : "Unexpected error"
-          }
-        }
-      }
     }
   },
   "components" : {
     "schemas" : {
-      "user" : {
-        "required" : [ "city", "id", "property1", "property2", "username" ],
+      "users" : {
         "type" : "object",
         "properties" : {
           "id" : {
             "type" : "integer",
             "example" : 4
           },
-          "name" : {
-            "type" : "string",
-            "example" : "Arthur Dent"
+          "city" : {
+            "example" : "Barcelona"
+          },
+          "property1" : {
+            "example" : "Carrrer Tiradors"
+          },
+          "property2" : {
+            "example" : "Passeig de MontJuic"
           }
         }
       },
@@ -144,20 +109,6 @@
           },
           "property2" : {
             "type" : "string"
-          }
-        }
-      },
-      "inline_response_200" : {
-        "type" : "object",
-        "properties" : {
-          "id" : {
-            "type" : "integer",
-            "format" : "int64",
-            "example" : 4
-          },
-          "name" : {
-            "type" : "string",
-            "example" : "Jessica Smith"
           }
         }
       }

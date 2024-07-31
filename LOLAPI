@@ -9,6 +9,19 @@
     "url" : "https://virtserver.swaggerhub.com/APIAPITESTSWAGGER/4pl/1.0.0",
     "description" : "SwaggerHub API Auto Mocking"
   } ],
+  "tags" : [ {
+    "name" : "city",
+    "description" : "Finds city by name",
+    "externalDocs" : {
+      "url" : "https://github.com/lolALICE8DESPEGANDO/API/blob/main/city.js"
+    }
+  }, {
+    "name" : "property",
+    "description" : "Access to property",
+    "externalDocs" : {
+      "url" : ""
+    }
+  } ],
   "paths" : {
     "/users" : {
       "get" : {
@@ -77,7 +90,7 @@
   },
   "components" : {
     "schemas" : {
-      "users" : {
+      "user" : {
         "type" : "object",
         "properties" : {
           "id" : {
@@ -92,6 +105,9 @@
           },
           "property2" : {
             "example" : "Passeig de MontJuic"
+          },
+          "country" : {
+            "example" : "Spain"
           }
         }
       },
@@ -104,10 +120,10 @@
           "city" : {
             "type" : "string"
           },
-          "property1" : {
+          "1_property1" : {
             "type" : "string"
           },
-          "property2" : {
+          "1_property2" : {
             "type" : "string"
           }
         }

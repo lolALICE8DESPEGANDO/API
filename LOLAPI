@@ -19,7 +19,13 @@
     "name" : "property",
     "description" : "Access to property",
     "externalDocs" : {
-      "url" : ""
+      "url" : "https://github.com/lolALICE8DESPEGANDO/API/blob/main/city.js"
+    }
+  }, {
+    "name" : "country",
+    "description" : "Finds country by name",
+    "externalDocs" : {
+      "url" : "https://github.com/lolALICE8DESPEGANDO/API/blob/main/country.js"
     }
   } ],
   "paths" : {
